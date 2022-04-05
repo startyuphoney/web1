@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+	  <title></title>
+	     <meta charset = "utf-8">
+  </head>
+     <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            var coworkers = {//객체는 중괄호
+                "programmer":"egoing", // 프로퍼티
+                "designer":"leezche"
+            };
+            document.write("programmer : "+coworkers.programmer+"<br>");
+            document.write("designer : "+coworkers.designer+"<br>");
+            coworkers.bookkeeper = "duru";
+            document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+            coworkers["data scientist"] = "teaho";
+            document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+        </script>
+        <h2>Interate</h2>
+
+    <script>
+        for(var key in coworkers){
+            document.write(key+' : '+coworkers[key]+'<br>');  //+하고 ''을 쓰더라 맨날 
+        }
+    </script>
+    <h2>Property & Method</h2> <!-- 객채에 소속된 함수를 method 변수는 프로퍼티-->
+    <script>
+        coworkers.showAll = function(){
+            for(var key in this){
+            document.write(key+' : '+this[key]+'<br>');
+          }
+        }
+        coworkers.showAll();
+    </script>
+    </body>
+</html>

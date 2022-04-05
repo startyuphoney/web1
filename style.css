@@ -2,7 +2,7 @@
     margin:0;
   }
   a {
-    color:black;
+    /*color:black; -야간모드시에 메뉴가 안보임*/
     text-decoration: underline;
   }
   h1 {
